@@ -1,0 +1,16 @@
+project:
+  goreleaser.yaml:
+    project_name:
+      ✔ replace PLACEHOLDER with actual name @done(24-09-09 11:28)
+    env:
+      GO_MAIN_PATH:
+        ✔ replace PLACEHOLDER with actual path @done(24-09-09 11:28)
+      VERSION_PATH:
+        ✔ replace PLACEHOLDER with acutual path @done(24-09-09 11:28)
+  readme.md:
+    ✔ update based on relevant project info @done(24-09-09 12:19)
+  testing:
+    ✔ write tests @done(24-09-09 12:27)
+  .github:
+    workflows:
+      ☐ verify everythign is setup
