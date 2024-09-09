@@ -1,5 +1,6 @@
 ![License](https://img.shields.io/badge/license-MIT-blue)
-
+[![testing](https://github.com/ondrovic/folder-structure-cli/actions/workflows/testing.yml/badge.svg)](https://github.com/ondrovic/folder-structure-cli/actions/workflows/testing.yml)
+[![releaser](https://github.com/ondrovic/folder-structure-cli/actions/workflows/releaser.yml/badge.svg)](https://github.com/ondrovic/folder-structure-cli/actions/workflows/releaser.yml)
 # Folder Structure CLI
 
 ## Overview
