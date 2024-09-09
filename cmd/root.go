@@ -6,15 +6,15 @@ import (
 )
 
 var (
-	version *string
+	Version string
 )
 
 func checkVersion() string {
-	if version == nil {
+	if Version == "" {
 		return "0.0.0"
 	}
 
-	return *version
+	return Version
 }
 
 var RootCmd = &cobra.Command{

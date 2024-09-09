@@ -3,8 +3,8 @@ version: 2
 project_name: folder-structure-cli
 
 env:
- - GO_MAIN_PATH=main.go
- - VERSION_PATH=folder-structure-cli/cmd/root.version
+ - GO_MAIN_PATH=folder-structure-cli.go
+ - VERSION_PATH=github.com/ondrovic/folder-structure-cli/cmd.Version
 
 
 before:

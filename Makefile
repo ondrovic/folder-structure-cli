@@ -1,9 +1,9 @@
 export GO111MODULE=on
 GOOS := $(shell go env GOOS)
 VERSION := $(shell git describe --tags --always)
-BUILD_FLAGS := -ldflags="-X 'main.version=$(VERSION)'"
+BUILD_FLAGS := -ldflags="-X 'github.com/ondrovic/folder-structure-cli/cmd.Version=$(VERSION)'"
 # update to main app path
-APP_PATH := main.go
+APP_PATH := folder-structure-cli.go
 
 # determins the variables based on GOOS 
 ifeq ($(GOOS), windows)
