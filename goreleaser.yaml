@@ -44,7 +44,7 @@ builds:
       - -X go.szostok.io/version.buildDate={{.Date}}
       - -X go.szostok.io/version.commit={{.FullCommit}}
       - -X go.szostok.io/version.commitDate={{.CommitDate}}
-      - -X go.szostok.io/version.dirtyBuild=false
+      - -X go.szostok.io/version.dirtyBuild={{.IsGitDirty}}
 
   - id: macos
     main: '{{ .Env.GO_MAIN_PATH }}'
@@ -60,7 +60,7 @@ builds:
       - -X go.szostok.io/version.buildDate={{.Date}}
       - -X go.szostok.io/version.commit={{.FullCommit}}
       - -X go.szostok.io/version.commitDate={{.CommitDate}}
-      - -X go.szostok.io/version.dirtyBuild=false
+      - -X go.szostok.io/version.dirtyBuild={{.IsGitDirty}}
 
 archives:
   - format: tar.gz
