@@ -4,10 +4,16 @@ import (
 	"go.szostok.io/version/extension"
 )
 
+const (
+	repoOwner = "ondrovic"
+	repoName  = "folder-structure-cli"
+)
+
 func init() {
+
 	RootCmd.AddCommand(
 		extension.NewVersionCobraCmd(
-			extension.WithUpgradeNotice("ondrovic", "folder-structure-cli"),
+			extension.WithUpgradeNotice(repoOwner, repoName),
 		),
 	)
 }

@@ -10,12 +10,14 @@ ifeq ($(GOOS), windows)
 	CONFIG_PATH = $(subst  ,,$(HOME)\.golangci.yaml)
 	OUTPUT_PATH = C:\cli-tools
 	DATE=$(shell powershell -Command "(Get-Date).ToString('yyyy-MM-ddTHH:mm:sszzz')")
+	DIRTY=$(shell powershell -Command "if (git status --porcelain) { echo true } else { echo false }")
 else
     RM = rm -f
 	HOME = $(shell echo $$HOME)
 	CONFIG_PATH = $(HOME)/.golangci.yaml
 	OUTPUT_PATH = /usr/local/bin
 	DATE=$(shell date +"%Y-%m-%dT%H:%M:%S%z")
+	DIRTY=$(shell git status --porcelain | grep . > /dev/null && echo true || echo false)
 endif
 
 GO_BUILD_LDFLAGS=\
@@ -23,7 +25,7 @@ GO_BUILD_LDFLAGS=\
   -X go.szostok.io/version.commit=$(shell git rev-parse --short HEAD) \
   -X go.szostok.io/version.buildDate=$(DATE) \
   -X go.szostok.io/version.commitDate=$(shell git log -1 --date=format:"%Y-%m-%dT%H:%M:%S%z" --format=%cd) \
-  -X go.szostok.io/version.dirtyBuild=false
+  -X go.szostok.io/version.dirtyBuild=$(DIRTY)
 
 check-quality:
 	@make tidy
