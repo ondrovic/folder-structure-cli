@@ -1,7 +1,5 @@
 export GO111MODULE=on
 GOOS := $(shell go env GOOS)
-# VERSION := $(shell git describe --tags --always)
-# BUILD_FLAGS := -ldflags="-X 'github.com/ondrovic/folder-structure-cli/cmd.Version=$(VERSION)'"
 # update to main app path
 APP_PATH := folder-structure-cli.go
 
