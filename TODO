@@ -13,4 +13,4 @@ project:
     ✔ write tests @done(24-09-09 12:27)
   .github:
     workflows:
-      ☐ verify everythign is setup
+      ✔ verify everythign is setup @done(24-09-10 12:05)
