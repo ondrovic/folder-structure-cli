@@ -1,6 +1,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue)
 [![testing](https://github.com/ondrovic/folder-structure-cli/actions/workflows/testing.yml/badge.svg)](https://github.com/ondrovic/folder-structure-cli/actions/workflows/testing.yml)
 [![releaser](https://github.com/ondrovic/folder-structure-cli/actions/workflows/releaser.yml/badge.svg)](https://github.com/ondrovic/folder-structure-cli/actions/workflows/releaser.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ondrovic/folder-structure-cli)](https://goreportcard.com/report/github.com/ondrovic/folder-structure-cli)
 # Folder Structure CLI
 
 ## Overview
